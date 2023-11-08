@@ -28,9 +28,9 @@ app.use(cors({
     credentials: true
 }));
 
-app.use('/api/v1/user' , userRoutes)
-app.use('/api/v1/course' , courseRoutes)
-app.use('/api/v1/payments' , paymentRoutes)
+app.use('/user' , userRoutes)
+app.use('/course' , courseRoutes)
+app.use('/payments' , paymentRoutes)
 //routes of three modules 
 
 app.all('*', (req, res) => {
