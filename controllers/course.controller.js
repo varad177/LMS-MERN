@@ -10,7 +10,7 @@ const getAllCourse = async (req, res, next) => {
         message: "couses are not available",
       });
     }
-    res.status(200).json({
+    return res.status(200).json({
       success: true,
       message: "All Courses",
       course,
