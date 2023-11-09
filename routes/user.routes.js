@@ -23,7 +23,7 @@ router.post('/reset' , forgotPassword);
 
 router.post('/reset/:resetToken' , resetPassword);
 router.post('/change-password' , isLoggedIn , changepassword);
-router.put('/update/:id'   , updateuser)
+router.put('/update/:id'  , upload.single("avatar") , updateuser)
 router.post('/contact' , sendContactMessage)
 
 export default router
