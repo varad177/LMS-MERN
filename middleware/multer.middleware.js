@@ -6,7 +6,6 @@ import path from 'path'
 
 const upload = multer({
 
-    dest: 'uploads/',
     limits: { fileSize: 50 * 1024 * 1024 }, //50 mb in size
     storage: multer.diskStorage({
         destination: 'uploads/',
