@@ -2,7 +2,7 @@
 import multer from 'multer';
 import path from 'path';
 
-const storage = multer.memoryStorage({
+const storage = multer.diskStorage({
   destination: function (_req, _file, cb) {
     cb(null, 'uploads/'); // Specify the destination directory for uploaded files
   },
