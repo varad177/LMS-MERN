@@ -28,6 +28,13 @@ app.use(morgan("dev"));
 //     credentials: true
 // }));
 
+
+
+app.use("/user", userRoutes);
+app.use("/course", courseRoutes);
+app.use("/payments", paymentRoutes);
+//routes of three modules
+
 app.use(express.static(path.join(__dirname, "./client/dist")));
 app.get("*", function (_, res) {
   res.sendFile(
@@ -37,11 +44,6 @@ app.get("*", function (_, res) {
     }
   );
 });
-
-app.use("/user", userRoutes);
-app.use("/course", courseRoutes);
-app.use("/payments", paymentRoutes);
-//routes of three modules
 
 app.all("*", (req, res) => {
   res.status(404).send("opps! 404 page not found");
