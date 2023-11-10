@@ -34,7 +34,7 @@ export const purchaseCourseBundle = createAsyncThunk('/purchasecourse', async (i
 })
 
 
-export const varifyUserPayment = createAsyncThunk('/payments/varify', async (data )=>{
+export const varifyUserPayment = createAsyncThunk('/payment/varify', async (data )=>{
     try {
         const response = await axiosinstance.post(`/payments/verify`, {
             id : data.id,

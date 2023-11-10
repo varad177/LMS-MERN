@@ -60,8 +60,6 @@ const Checkout = () => {
         toast.success("payment successfully");
 
         const res = await dispatch(varifyUserPayment(paymentDetails));
-        console.log(res);
-        console.log(res);
         res?.payload?.success || isPaymentVarified
           ? navigate("/checkout/success")
           : navigate("/checkout/fail");
@@ -102,7 +100,7 @@ const Checkout = () => {
               All the existing and new courses will be also available
             </p>
             <p className="flex items-center justify-center gap-1 text-2xl font-bold text-yellow-500">
-              <BiRupee /> <span>499 only</span>
+              <BiRupee /> <span>1 rs only</span>
             </p>
             <div className="text-grey-200">
               <p>100% refund on cancellation</p>

@@ -284,7 +284,7 @@ const updateuser = async (req, res) => {
         user.avatar.secure_url = result.secure_url;
 
         //removed the file from the local system
-         fs.rm(`uploads/${req.file.filename}`);
+        fs.rm(`uploads/${req.file.filename}`);
       } else {
         console.log("result not getted");
       }
