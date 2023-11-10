@@ -81,7 +81,7 @@ const resister = async (req, res) => {
 
   return res.status(200).json({
     success: true,
-    message: "user register successfully",
+    message: "user register successfully, Now Kindly Login ",
     user,
   });
 };
